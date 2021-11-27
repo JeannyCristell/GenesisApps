@@ -83,7 +83,7 @@ public class ProveedorDAO implements CRUD_Proveedor {
     @Override
     public boolean add(Proveedor prov) {
         String squery = "INSERT INTO proveedor (rfc,nombre,direccion,telefono,correo)" 
-                + "VALUES ('"+prov.getRfc()+"', '"+prov.getNombre()+"', '"+prov.getDireccion()+"','"+prov.getTelefono()+"', '"+prov.getCorreo()+"');";
+                + "VALUES ('"+prov.getRfc()+"', '"+prov.getNombre()+"', '"+prov.getDireccion()+"',"+prov.getTelefono()+", '"+prov.getCorreo()+"');";
               
         try{
             con = cox.getConnection();
@@ -100,7 +100,7 @@ public class ProveedorDAO implements CRUD_Proveedor {
     @Override
     public boolean edit(Proveedor prov) {
         String squery = "UPDATE proveedor SET rfc='"+prov.getRfc()+"', nombre='"+prov.getNombre()+"', "
-                + "direccion='"+prov.getDireccion()+"', telefono='"+prov.getTelefono()+"', correo='"+prov.getCorreo()+"'WHERE rfc='"+prov.getRfc()+"';";
+                + "direccion='"+prov.getDireccion()+"', telefono="+prov.getTelefono()+", correo='"+prov.getCorreo()+"'WHERE rfc='"+prov.getRfc()+"';";
 	
         System.out.println(squery);
         

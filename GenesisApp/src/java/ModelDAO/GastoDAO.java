@@ -89,8 +89,8 @@ public class GastoDAO implements CRUD_Gasto {
     // Método que inserta un Gasto
     @Override
     public boolean add(Gasto gast) {
-    String squery = "INSERT INTO gasto (folio, fecha, definicion, importeciva, importesinva, idtipogasto, rfgerente)" 
-                + "VALUES ("+gast.getFolio()+", '"+gast.getFecha()+"', '"+gast.getDefinicion()+","+gast.getImporteCiva()+","+gast.getImporteSinva()+","+gast.getIdTipoGasto()+",'"+gast.getRfGerente()+"');";
+    String squery = "INSERT INTO gasto (fecha, definicion, importeciva, importesinva, idtipogasto, rfgerente)" 
+                + "VALUES ('"+gast.getFecha()+"', '"+gast.getDefinicion()+","+gast.getImporteCiva()+","+gast.getImporteSinva()+","+gast.getIdTipoGasto()+",'"+gast.getRfGerente()+"');";
               
         try{
             con = cox.getConnection();

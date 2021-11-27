@@ -83,8 +83,8 @@ public class TipoGastoDAO implements CRUD_TipoGasto {
     @Override
     public boolean add(TipoGasto tipogast) {
     
-        String squery = "INSERT INTO tipoGasto (id,descripcion,tipo)" 
-                + "VALUES ("+tipogast.getId()+", '"+tipogast.getDescripcion()+"', '"+tipogast.getTipo()+"');";
+        String squery = "INSERT INTO tipoGasto (descripcion,tipo)" 
+                + "VALUES ('"+tipogast.getDescripcion()+"', '"+tipogast.getTipo()+"');";
               
         try{
             con = cox.getConnection();

@@ -88,8 +88,8 @@ public class CatNominaDAO implements CRUD_CatNomina{
     //Método que inserta una CatNomina
     @Override
     public boolean add(CatNomina cnomi) {
-    String squery = "INSERT INTO catnomina (folio, fecha, mesanio, periodo, monto, rfcempleado)" 
-                + "VALUES ("+catNomi.getFolio()+", '"+catNomi.getFecha()+"', '"+catNomi.getMesAnio()+"','"+catNomi.getPeriodo()+"', "+catNomi.getMonto()+",'"+catNomi.getRfcEmpleado()+"');";
+    String squery = "INSERT INTO catnomina (fecha, mesanio, periodo, monto, rfcempleado)" 
+                + "VALUES ('"+catNomi.getFecha()+"', '"+catNomi.getMesAnio()+"','"+catNomi.getPeriodo()+"', "+catNomi.getMonto()+",'"+catNomi.getRfcEmpleado()+"');";
               
         try{
             con = cox.getConnection();
